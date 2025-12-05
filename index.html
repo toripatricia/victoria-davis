@@ -6,6 +6,13 @@
     <title>Victoria Davis, soprano</title>
 
     <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Castoro:ital@0;1&family=Meddon&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -20,9 +27,9 @@
     </button>
 
     <ul class="nav-links" id="navMenu">
-      <li><a href="index.html" class="nav-link home">Home</a></li>
-      <li><a href="about.html" class="nav-link about">About</a></li>
-      <li><a href="schedule.html" class="nav-link schedule">Schedule</a></li>
+      <li><a href="index.html" class="nav-link home">HOME</a></li>
+      <li><a href="about.html" class="nav-link about">ABOUT</a></li>
+      <li><a href="schedule.html" class="nav-link schedule">SCHEDULE</a></li>
     </ul>
   </div>
 
@@ -34,19 +41,19 @@
 
   <div class="nav-right">
     <ul class="nav-links" id="navMenuRight">
-      <li><a href="press.html" class="nav-link press">Press</a></li>
+      <li><a href="press.html" class="nav-link press">PRESS</a></li>
 
       <!-- MOBILE ACCORDION + DESKTOP HOVER DROPDOWN -->
       <li class="dropdown">
-        <a href="#" class="nav-link media" id="mediaToggle">Media</a>
+        <a href="#" class="nav-link media" id="mediaToggle">MEDIA</a>
 
         <ul class="dropdown-menu" id="mediaDropdown">
-          <li><a href="audio-video.html">Audio & Video</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="audio-video.html">AUDIO & VIDEO</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
         </ul>
       </li>
 
-      <li><a href="blog.html" class="nav-link blog">Blog</a></li>
+      <li><a href="blog.html" class="nav-link blog">BLOG</a></li>
     </ul>
   </div>
 </nav>
@@ -54,19 +61,18 @@
 <div id="home-content">
 
 <div id="home-photo-container">
+    <div class="overlay"></div>
     <img class="home-photo" src="/home-assets/homephoto.jpg">
 </div>
 
 <div id="home-text">
 
     <div class="first-name"><h1>Victoria</h1></div>
-    <div class="last-name"><h2>Davis</h2></div>
+    <div class="last-name"><h2>DAVIS</h2></div>
 
 </div>
 
 </div>
-
-
 
 </div>
 
@@ -84,13 +90,27 @@
         Davis moves fluidly between classic and contemporary repertoire with natural authority.
     </p>
 
+    <button class="bio-btn">VIEW FULL BIOGRAPHY</button>
+
     </div>
 </div>
 
 
 
 <div id="media">
-    <h1>MEDIA</h1>
+    
+<div id="media-container">
+      <div class="video-background-container">
+        <video autoplay muted loop playsinline>
+          <source src="/home-assets/vdclip.mp4" type="video/mp4" style="width: 100%; height: 100%;">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div id="overlay-content" class="fade-in">
+          <a href="media.html"><button id="view-media">MEDIA</button></a>
+        </div>
+      </div>
+    </div>
 </div>
 
 
