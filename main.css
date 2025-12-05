@@ -18,7 +18,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 18vh;
+  height: 12vh;
   background-color: #22050D;
   display: flex;
   justify-content: space-around;
@@ -39,11 +39,12 @@ body {
 
 .navbar a {
   text-decoration: none;
-  font-family: Arial, sans-serif;
-  color: #ffffff;
+  font-family: "Bona Nova SC", serif;
+  color: #D3C3C1;
   font-size: 18px;
   padding: 10px 0;
   position: relative;
+  font-size: 1.5vw;
 }
 
 /* ================================
@@ -125,34 +126,170 @@ body {
 
 /*home content*/
 
+#home-content {
+    position: relative;  
+    display: flex;
+}
+
+#home-photo-container {
+    position: relative;
+    margin-top: 10vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust for desired darkness */
+}
+
 #home-photo-container img {
     height: 100vh;
+    width: auto;
+    object-fit: cover;
 }
 
-#home-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#home-text {
-    margin-top: 15vw;
+.first-name {
+    position: absolute;
+    z-index: 10;
+    left: 40vw;   
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
+
+.last-name {
+    position: absolute;
+    top: 35vh;
+    z-index: 10;
+    left: 75vw;   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#home-text h1 {
+    font-family: "Meddon", cursive;
+    font-size: 20vh;
+    color: #B6A592;
+}
+
+#home-text h2 {
+    font-family: "Bona Nova SC", serif;
+    font-size: 12vh;
+    color: #AD9797;
+}
+
 
 
 /* ABOUT */
+
+#about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 #about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50vw;
+    height: 60%;
+    max-width: 40vw;
     background-color: #B6A592;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    text-align: center;
+    border-radius: 5%;
+}
+
+#about-container h1 {
+    font-family: "Meddon", cursive;
+    font-size: 3vw;
+    color: #5F4337;
+}
+
+.about-text {
+    font-family: "Castoro", serif;
+    font-size: 1.25vw;
+    color: #5F4337;
+}
+
+.bio-btn {
+    font-family: "Bona Nova SC", serif;
+    font-size: 3vh;
+    padding: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    background-color: transparent;
+    color: #5F4337;
+    border-color: #5F4337;
+}
+
+
+/* MEDIA */
+
+#media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
+}
+
+#media-container {
+  width: 75%;
+  height: 75%;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  letter-spacing: 5px;
+  font-style: italic;
+}
+
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#view-media {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent; 
+    border: 2px solid #D8DAE1; 
+    color: #D8DAE1;
+    cursor: pointer;
+    font-family: "Wittgenstein", serif;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#view-media:hover {
+  background-color: #D8DAE1;
+  color: #343E61;
+}
+
+.video-background-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%); 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto; 
+  z-index: -1; 
+  object-fit: cover; 
 }
 
 /* ======================================
