@@ -45,6 +45,7 @@ body {
   padding: 10px 0;
   position: relative;
   font-size: 1.5vw;
+  letter-spacing: 5px;;
 }
 
 /* ================================
@@ -168,16 +169,67 @@ body {
     align-items: flex-start;
 }
 
-#home-text h1 {
+.first-name h1 {
     font-family: "Meddon", cursive;
     font-size: 20vh;
     color: #B6A592;
 }
 
-#home-text h2 {
+.last-name h2 {
     font-family: "Bona Nova SC", serif;
     font-size: 12vh;
     color: #AD9797;
+}
+
+#up-next-container {
+  position: absolute;
+  z-index: 10;
+  left: 60vw;
+  top: 55vh;
+  text-align: center;
+}
+
+.up-next {
+  font-family: "Meddon", cursive;
+  font-size: 3.5vh;
+   color: #B6A592;
+}
+
+.role {
+  font-size: 2.5vh;
+  color: #C4ADBA;
+  font-family: "Castoro", serif;
+  letter-spacing: 5px;
+}
+
+.company {
+  font-family: "Castoro", serif;
+  font-size: 2vh;
+  color: #C4ADBA;
+  letter-spacing: 5px;
+}
+
+.dates {
+  font-family: "Castoro", serif;
+  font-size: 2.h;
+  color: #C4ADBA;
+  letter-spacing: 5px;
+}
+
+#view-schedule {
+  font-family: "Castoro", serif;
+  font-size: 2.5vh;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  background-color: transparent;
+  color: #C4ADBA;
+  border: 2px solid;
+  border-color: #AF8A92;
+  letter-spacing: 5px;
 }
 
 
@@ -262,14 +314,13 @@ body {
 }
 
 #view-media {
-    margin-top: 20px;
-    padding: 10px 20px;
+    padding: 20px 30px;
     background-color: transparent; 
     border: 2px solid #D8DAE1; 
     color: #D8DAE1;
     cursor: pointer;
-    font-family: "Wittgenstein", serif;
-    font-size: 1rem;
+    font-family: "Bona Nova SC", serif;
+    font-size: 3rem;
     letter-spacing: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -291,6 +342,43 @@ body {
   z-index: -1; 
   object-fit: cover; 
 }
+
+#overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 50; /* above video + overlay */
+}
+
+/* CONTACT */
+
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#left-side {
+  height: 70vh;
+  width: 30vw;
+  background-color: white;
+}
+
+#right-side h2 {
+  font-family: "Meddon", cursive;
+  font-size: 3.5vh;
+  color: #B6A592;
+  text-align: center;
+}
+
 
 /* ======================================
    MOBILE STYLES
@@ -314,22 +402,33 @@ body {
   }
 
   /* Hide menus by default */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    padding: 15px 0;
-  }
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -50%;     /* hide off screen */
+  height: 100vh;
+  width: 50%;      /* HALF the screen */
+  background: #B6A592;
+  padding-top: 80px;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 9999;   /* above everything */
+  display: flex;   /* always flex; visibility controlled by left position */
+}
 
   .nav-links li {
-    padding: 10px 20px;
+    padding: 2vh;
+  }
+
+  .navbar a {
+    color: #22050D;
+    font-size: 3vh;
   }
 
   /* Show when active */
-  .nav-links.show {
-    display: flex;
-  }
+ .nav-links.show {
+  left: 0;         /* slide into view */
+}
 
   /* Mobile dropdown transforms into accordion */
   .dropdown-menu {
@@ -349,5 +448,13 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px 0;
+  }
+
+  #navMenuRight {
+  display: none !important;
+}
+
+.nav-logo {
+    display: none;
   }
 }
