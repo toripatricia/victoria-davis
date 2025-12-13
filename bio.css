@@ -1,0 +1,277 @@
+body {
+    background-color: #22050D;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: #22050D;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 6vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: "Bona Nova SC", serif;
+  color: #D3C3C1;
+  font-size: 18px;
+  padding: 10px 0;
+  position: relative;
+  font-size: 1.5vw;
+  letter-spacing: 5px;;
+}
+
+/* ================================
+   ACTIVE LINK UNDERLINE
+================================ */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: -4px;
+  left: 0;
+}
+
+/* ================================
+   LOGO
+================================ */
+.nav-logo img {
+  height: 15vh;
+  width: auto;
+}
+
+/* ================================
+   DROPDOWN MENU — FIXED VERSION
+================================ */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #B6A592;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 160px;
+
+  /* HIDDEN BY DEFAULT */
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Optional: Hover effects */
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+
+/* ======================================
+   HAMBURGER BUTTON
+====================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+}
+
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw; 
+  height: 40vw;
+  margin: 0 auto; 
+}
+
+/* Circular image styling */
+.photo-wrapper {
+    margin-top: 25vh;
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Image overlay */
+.photo-wrapper::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); 
+  border-radius: 50%; 
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+/* Text overlay styling */
+.text-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: absolute;
+  bottom: 20%; 
+  background-color: #8C6162; 
+  padding: 10px 20px;
+  line-height: 100px;
+  text-align: center;
+  transform: translateY(50%);
+  width: 1200px;
+  height: 150px;
+  z-index: 2; 
+}
+
+.text-overlay h2 {
+  margin: 0;
+  font-size: 4rem; 
+  color: #e9dfe1;
+  letter-spacing: 5px;
+  font-family: "Bona Nova", serif;
+}
+
+.text-overlay h2 span {
+  font-size: 10rem; 
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-family: "Meddon", cursive;
+   position: relative;   
+  top: 20px;           
+}
+
+#bio-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+}
+
+#bio-container {
+  display: flex; 
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center; 
+  width: 80%;
+  height: fit-content;
+  padding: 3rem;
+}
+
+#bio-content p {
+  font-family: "Bona Nova", serif;
+  color: #D3C3C1;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: "Bona Nova SC", serif;
+  letter-spacing: 1px;
+}
+
+#resume {
+  background-color: transparent;
+  border: 1px solid #D3C3C1;
+  color: #efe8e9;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Inria Serif", serif;
+  letter-spacing: 3px;
+}
+
+#resume:hover {
+  background-color: #8C6162;
+  color: #D3C3C1;
+  border: 1px solid #8C6162;
+  transition: ease 0.3s;
+}
+
+#press-kit {
+  background-color: transparent;
+  border: 1px solid #D3C3C1;
+  color: #efe8e9;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Inria Serif", serif;
+  letter-spacing: 3px;
+}
+
+#press-kit:hover {
+  background-color: #8C6162;
+  color: #D3C3C1;
+  border: 1px solid #8C6162;
+  transition: ease 0.3s;
+}
+
+#logo-container {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 3rem;
+}
+
+#bio-logo {
+  height: 20vh;
+}
