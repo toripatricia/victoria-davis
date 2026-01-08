@@ -4,8 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Castoro:ital@0;1&family=Meddon&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="listen.css">
 </head>
 <body>
+
+    <div id="listen">
     
+<nav class="navbar">
+  <div class="nav-left">
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html" class="nav-link home">HOME</a></li>
+      <li><a href="biography.html" class="nav-link about">ABOUT</a></li>
+      <li><a href="schedule.html" class="nav-link schedule">SCHEDULE</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="/home-assets/VDlogo.png" alt="Logo">
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <ul class="nav-links" id="navMenuRight">
+      <li><a href="press.html" class="nav-link press">PRESS</a></li>
+
+      <!-- MOBILE ACCORDION + DESKTOP HOVER DROPDOWN -->
+      <li class="dropdown">
+        <a href="#" class="nav-link media" id="mediaToggle">MEDIA</a>
+
+        <ul class="dropdown-menu" id="mediaDropdown">
+          <li><a href="listen.html">AUDIO & VIDEO</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+      </li>
+
+      <li><a href="blog.html" class="nav-link blog">BLOG</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div id="audio-wrapper">
+
+      <div class="audio-player">
+        <audio id="audio"></audio>
+
+        <div class="track-list">
+          <h1 class="reveal">listen</h1>
+          <ul id="track-list" class="reveal">
+            <li data-index="0" class="active">"Aria" - <i>Opera</i> - Composer</li>
+            <li data-index="1">"Aria" - <i>Opera</i> - Composer</li>
+          </ul>
+        </div>
+
+        <div class="controls">
+          <button id="prev">&#9664;&#9664;</button> <!-- Solid black previous icon -->
+          <button id="play-pause">&#9654;</button> <!-- Solid black play icon -->
+          <button id="next">&#9654;&#9654;</button> <!-- Solid black next icon -->
+        </div>
+
+        <div class="track-info">
+          <p id="track-title" class="reveal">Track 1</p>
+        </div>
+
+        <input type="range" id="progress" value="0" step="1" min="0" max="100">
+      </div>
+    </div>
+
+    <div id="video-wrapper">
+
+      <div id="videos">
+        <h1 id="video-header" class="reveal">watch</h1>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VdkuPr9Uhz4?si=IXSaMjl1EBphDZsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</div>
+
+
+
+
+
+
+    <script src="listen.js"></script>
 </body>
 </html>
