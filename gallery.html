@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Castoro:ital@0;1&family=Meddon&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="gallery.css" />
 </head>
 <body>
     
+    <div id="gallery">
+        <nav class="navbar">
+        <div class="nav-left">
+          <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-links" id="navMenu">
+            <li><a href="index.html" class="nav-link home">HOME</a></li>
+            <li><a href="biography.html" class="nav-link about">ABOUT</a></li>
+            <li>
+              <a href="schedule.html" class="nav-link schedule">SCHEDULE</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="/home-assets/VDlogo.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="nav-right">
+          <ul class="nav-links" id="navMenuRight">
+            <li><a href="press.html" class="nav-link press">PRESS</a></li>
+
+            <!-- MOBILE ACCORDION + DESKTOP HOVER DROPDOWN -->
+            <li class="dropdown">
+              <a href="#" class="nav-link media" id="mediaToggle">MEDIA</a>
+
+              <ul class="dropdown-menu" id="mediaDropdown">
+                <li><a href="listen.html">AUDIO & VIDEO</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+              </ul>
+            </li>
+
+            <li><a href="blog.html" class="nav-link blog">BLOG</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="headshots">
+        <h1>headshots</h1>
+      </div>
+
+
+      <div id="on-stage">
+        <h1>on stage</h1>
+      </div>
+
+      
+    </div>
 </body>
 </html>
