@@ -173,6 +173,7 @@ body {
     font-family: "Meddon", cursive;
     font-size: 20vh;
     color: #B6A592;
+    font-weight: 200;
 }
 
 .last-name h2 {
@@ -193,6 +194,7 @@ body {
   font-family: "Meddon", cursive;
   font-size: 3.5vh;
    color: #B6A592;
+   font-weight: 200;
 }
 
 .role {

@@ -114,36 +114,30 @@ body {
   border-radius: 3px;
 }
 
-/* blog content */
+/*gallery content*/
 
-#blog-header h1 {
+#headshots {
+    display: flex;
+    justify-content: center;
+}
+
+#headshots h1 {
     font-family: "Meddon", cursive;
     color: #D3C3C1;
     font-size: 5rem;
     font-weight: 200;
+    margin-top: 16vh;
 }
 
-#blog-content {
+#on-stage {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15vh;
+    justify-content: center;
 }
 
-.blog-container {
-    background-color: #8C6162;
-    width: 50%;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 1rem;
-}
-
-#logo-container {
-  display: flex;
-  justify-self: center;
-  margin-bottom: 3rem;
-}
-
-#blog-logo {
-  height: 20vh;
+#on-stage h1 {
+    font-family: "Meddon", cursive;
+    color: #D3C3C1;
+    font-size: 5rem;
+    font-weight: 200;
+    margin-top: 16vh;
 }
